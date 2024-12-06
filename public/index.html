@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Galblease</title>
-   
-    <meta name="googlebot" content="index, follow, snippet" />
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <script src="baremux/index.js" defer></script>
-    <script src="epoxy/index.js" defer></script>
-    <script src="uv/uv.bundle.js" defer></script>
-    <script src="uv/uv.config.js" defer></script>
-    <script src="register-sw.js" defer></script>
-    <script src="search.js" defer></script>
-    <script src="index.js" defer></script>
-    <script type="application/ld+json">
-   
-    </script>
-    <style>
-      body {
-        font-family: 'Audiowide', sans-serif;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div
-      title="Ultraviolet Logo"
-      class="flex-center logo-wrapper header-center"
-    >
-    
-      <h1>Galblease 2 Search</h1>
-    </div>
-    <div class="flex-center desc left-margin">
-      <p>
-        
-      </p>
-    </div>
-
-    <form id="uv-form" class="flex-center">
-      <input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
-      <input id="uv-address" type="text" placeholder="Search the web freely" />
-    </form>
-    <div class="desc left-margin">
-      <p id="uv-error"></p>
-      <pre id="uv-error-code"></pre>
-    </div>
-    <footer>
-      <div>
-       
-        
+   <head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHVNHMYGN3"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Untitled</title>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div id="topRight">
+         <p><b style="font-family: 'Audiowide', sans-serif; font-size: 1.7em;">Galblease 2 Anti-Cybersecurity</b></p>
       </div>
-      <div>
-        <span>Powered by Ultraviolet</span>
+      <div id="content">
+         <form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=a&" type="hidden"/> 
+            <input id="uv-address" type="text" autocomplete="off" placeholder="Enter URL or search Google" class="form__input"/>
+         </form>
+         <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+         </div>
       </div>
-    </footer>
-    <iframe style="display: none;" id="uv-frame"></iframe>
-  </body>
+      <div id="belowSearch">
+         <p><b><u><a href="/other/#history"><x></x></a></u><br>
+         <u><a href="/other/#logins"><x></x></a></u></b></p>
+      </div>
+      <script>
+         document.body.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+               window.parent.location.replace("https://aspen.knoxschools.org/aspen/logon.do");
+            }
+         });
+      </script>
+      <script>
+         const changeLinks = document.querySelectorAll('.changeParentIframeLink');
+         changeLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+               event.preventDefault();
+               const newSrc = this.getAttribute('data-src');
+               window.parent.document.getElementById('embed').src = newSrc;
+            });
+         });
+      </script>
+      <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script src="register-sw.js" defer></script>
+      <script src="search.js" defer></script>
+      <script src="index.js" defer></script>
+      <script src="error.js" defer></script>
+   </body>
 </html>
